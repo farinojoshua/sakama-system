@@ -123,39 +123,26 @@ export function WhyChooseUsSection() {
                 </div>
               </div>
               
-              {/* Orbiting elements */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0"
-              >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-2xl p-4 shadow-xl">
-                  <div className="text-2xl font-bold text-foreground">50+</div>
-                  <div className="text-xs text-muted-foreground">Projects</div>
-                </div>
-              </motion.div>
+              {/* Static positioned elements - no infinite animations */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-2xl p-4 shadow-xl">
+                <div className="text-2xl font-bold text-foreground">50+</div>
+                <div className="text-xs text-muted-foreground">Projects</div>
+              </div>
               
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0"
-              >
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-card border border-border rounded-2xl p-4 shadow-xl">
-                  <div className="text-2xl font-bold text-foreground">99%</div>
-                  <div className="text-xs text-muted-foreground">Satisfaction</div>
-                </div>
-              </motion.div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-card border border-border rounded-2xl p-4 shadow-xl">
+                <div className="text-2xl font-bold text-foreground">99%</div>
+                <div className="text-xs text-muted-foreground">Satisfaction</div>
+              </div>
               
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0"
-              >
-                <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-2xl p-4 shadow-xl">
-                  <div className="text-2xl font-bold text-foreground">30+</div>
-                  <div className="text-xs text-muted-foreground">Clients</div>
-                </div>
-              </motion.div>
+              <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-2xl p-4 shadow-xl">
+                <div className="text-2xl font-bold text-foreground">30+</div>
+                <div className="text-xs text-muted-foreground">Clients</div>
+              </div>
+              
+              <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-2xl p-4 shadow-xl">
+                <div className="text-2xl font-bold text-foreground">24/7</div>
+                <div className="text-xs text-muted-foreground">Support</div>
+              </div>
             </div>
           </motion.div>
         </div>

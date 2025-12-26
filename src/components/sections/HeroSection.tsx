@@ -11,49 +11,23 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-primary-50 dark:to-primary-50/10">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Gradient Orbs */}
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-20 right-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]"
-        />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-          className="absolute -bottom-20 -left-20 w-[600px] h-[600px] bg-primary/15 rounded-full blur-[120px]"
-        />
+        {/* Gradient Orbs - Static for better performance */}
+        <div className="absolute top-20 right-20 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[80px]" />
+        <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[80px]" />
         
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(124,58,237,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(124,58,237,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
         
-        {/* Floating Icons */}
-        <motion.div
-          animate={{ y: [-10, 10, -10], rotate: [0, 5, 0] }}
-          transition={{ duration: 6, repeat: Infinity }}
-          className="absolute top-32 left-[15%] w-16 h-16 rounded-2xl bg-card border border-border shadow-xl flex items-center justify-center"
-        >
+        {/* Floating Icons - CSS animation for better performance */}
+        <div className="absolute top-32 left-[15%] w-16 h-16 rounded-2xl bg-card border border-border shadow-xl flex items-center justify-center animate-bounce" style={{ animationDuration: '3s' }}>
           <Code2 className="w-8 h-8 text-primary" />
-        </motion.div>
-        <motion.div
-          animate={{ y: [10, -10, 10], rotate: [0, -5, 0] }}
-          transition={{ duration: 7, repeat: Infinity }}
-          className="absolute top-48 right-[20%] w-14 h-14 rounded-2xl bg-card border border-border shadow-xl flex items-center justify-center"
-        >
+        </div>
+        <div className="absolute top-48 right-[20%] w-14 h-14 rounded-2xl bg-card border border-border shadow-xl flex items-center justify-center animate-pulse">
           <Smartphone className="w-7 h-7 text-primary" />
-        </motion.div>
-        <motion.div
-          animate={{ y: [-15, 5, -15], rotate: [0, 10, 0] }}
-          transition={{ duration: 8, repeat: Infinity }}
-          className="absolute bottom-40 left-[25%] w-12 h-12 rounded-xl bg-card border border-border shadow-xl flex items-center justify-center"
-        >
+        </div>
+        <div className="absolute bottom-40 left-[25%] w-12 h-12 rounded-xl bg-card border border-border shadow-xl flex items-center justify-center hidden lg:flex">
           <Globe className="w-6 h-6 text-primary" />
-        </motion.div>
+        </div>
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">

@@ -28,30 +28,18 @@ export function CTASection() {
           {/* Grid pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
           
-          {/* Floating decorative elements */}
-          <motion.div
-            animate={{ y: [-10, 10, -10], rotate: [0, 5, 0] }}
-            transition={{ duration: 6, repeat: Infinity }}
-            className="absolute top-10 left-10 w-20 h-20 rounded-2xl bg-white/10 backdrop-blur flex items-center justify-center"
-          >
+          {/* Floating decorative elements - CSS animation */}
+          <div className="absolute top-10 left-10 w-20 h-20 rounded-2xl bg-white/10 backdrop-blur flex items-center justify-center animate-pulse">
             <Sparkles className="w-10 h-10 text-white/60" />
-          </motion.div>
-          <motion.div
-            animate={{ y: [10, -10, 10], rotate: [0, -5, 0] }}
-            transition={{ duration: 7, repeat: Infinity }}
-            className="absolute bottom-10 right-10 w-16 h-16 rounded-full bg-white/10 backdrop-blur flex items-center justify-center"
-          >
+          </div>
+          <div className="absolute bottom-10 right-10 w-16 h-16 rounded-full bg-white/10 backdrop-blur flex items-center justify-center animate-bounce" style={{ animationDuration: '2s' }}>
             <Zap className="w-8 h-8 text-white/60" />
-          </motion.div>
-          <motion.div
-            animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 4, repeat: Infinity }}
-            className="absolute top-1/2 right-20 w-12 h-12 rounded-full bg-white/10"
-          />
+          </div>
+          <div className="absolute top-1/2 right-20 w-12 h-12 rounded-full bg-white/10 hidden lg:block" />
           
-          {/* Glowing orbs */}
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-[100px]" />
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-indigo-400/20 rounded-full blur-[80px]" />
+          {/* Glowing orbs - reduced blur */}
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-[60px]" />
+          <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-indigo-400/20 rounded-full blur-[50px]" />
 
           {/* Content */}
           <div className="relative z-10 px-8 py-20 md:px-16 md:py-28 text-center">
