@@ -13,8 +13,8 @@
 # testing
 /coverage
 
-# next.js
-/.next/
+# next.js (keeping .next for deployment to shared hosting)
+# /.next/
 /out/
 
 # production
